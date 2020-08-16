@@ -24,7 +24,7 @@ $(function() {
             if (config.Classes[vehicleClass]) {
                 maxFuel = config.Classes[vehicleClass];
             } else {
-                $.post('http://ug-fuel/close', JSON.stringify({
+                $.post('http://trs-fuel/close', JSON.stringify({
                     notification: '~y~Não podes encher o tanque deste veiculo.'
                 }))
             }
@@ -55,7 +55,7 @@ $(function() {
     })
 
     $('.fuel-selector-pay').click(function() {
-        $.post('http://ug-fuel/pay', JSON.stringify({
+        $.post('http://trs-fuel/pay', JSON.stringify({
             liters: currentFuel,
             price: currentFuel * config.PricePerLiter
         }))
@@ -63,7 +63,7 @@ $(function() {
 
     document.onkeyup = function(event) {
         if (event.which == 8 || event.which == 27) {
-            $.post('http://ug-fuel/close', JSON.stringify({}))
+            $.post('http://trs-fuel/close', JSON.stringify({}))
         }
     }
 })
