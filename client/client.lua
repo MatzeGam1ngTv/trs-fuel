@@ -54,7 +54,7 @@ RegisterNUICallback('pay', function(data)
         return
     end
 
-    ESX.TriggerServerCallback('ug-fuel:checkMoney', function(cb)
+    ESX.TriggerServerCallback('trs-fuel:checkMoney', function(cb)
 
         if cb then
 
